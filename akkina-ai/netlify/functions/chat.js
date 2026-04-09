@@ -5,7 +5,7 @@ exports.handler = async function (event) {
   }
 
   const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-  const GEMINI_MODEL   = process.env.GEMINI_MODEL || "gemini-1.5-flash";
+  const GEMINI_MODEL   = process.env.GEMINI_MODEL || "gemini-2.0-flash-lite";
 
   if (!GEMINI_API_KEY) {
     return {
