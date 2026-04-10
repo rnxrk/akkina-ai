@@ -521,9 +521,8 @@ async function sendMessage(){
       "/.netlify/functions/chat",
       {method:'POST',headers:{'Content-Type':'application/json'},
        body:JSON.stringify({
-         system_instruction:{parts:[{text:SYSTEM_PROMPT}]},
          contents:history,
-         generationConfig:{temperature:.82,maxOutputTokens:1024,topP:.95}
+         generationConfig:{temperature:.82,maxOutputTokens:800,topP:.95}
        })}
     );
     const data=await res.json();
