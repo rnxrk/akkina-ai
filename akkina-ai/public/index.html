@@ -530,7 +530,7 @@ async function sendMessage(){
     if(!res.ok){
       const err=data?.error?.message||'Something went wrong.';
       hideTyping();
-      if(/quota|limit|resource/i.test(err)){addMsg('assistant',TIRED_MSG);}
+      if(/quota|limit|resource/i.test(err)){addMsg('assistant','API Error: '+err);}
       else{addMsg('assistant',`Oh no, a little magical hiccup! 🌪️ ${err}. Please try again! 🌸`);}
       return;
     }
